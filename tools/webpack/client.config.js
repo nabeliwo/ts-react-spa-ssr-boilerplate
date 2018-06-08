@@ -18,7 +18,7 @@ const baseConfig = {
     path: path.join(__dirname, "./public/assets/js")
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx"]
+    extensions: [".ts", ".tsx", ".js"]
   },
   module: {
     rules: [
