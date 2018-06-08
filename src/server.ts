@@ -9,7 +9,9 @@ const app = express()
 const server = http.createServer(app)
 
 server.listen(PORT, () => {
-  console.log(` ⚙️  ${env} app listening @ ${PORT} ⚙️ \n`);
-  console.log(` --  launched @ ${Date()}  --`);
-  console.log('-------------------------------------------------------------------------------------\n\n');
+  global.console.log(` ⚙️  ${env} app listening @ ${PORT} ⚙️ \n`)
+  global.console.log(` --  launched @ ${Date()}  --`)
+  global.console.log(
+    '-------------------------------------------------------------------------------------\n\n',
+  )
 })

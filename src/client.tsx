@@ -2,8 +2,8 @@ import * as React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
-import { isDevelopment } from './constants/env'
 import App from './components/App'
+import { isDevelopment } from './constants/env'
 
 const root = document.getElementById('root')
 
