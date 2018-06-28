@@ -5,7 +5,6 @@ const isDevelopment = env === "development";
 
 module.exports = {
   target: "node",
-  devtool: isDevelopment ? "source-map" : false,
   entry: {
     server: "./src/server.js"
   },
