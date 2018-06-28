@@ -3,5 +3,5 @@ export const path = {
 };
 
 export const server = {
-  port: 3000
+  port: 3333
 };
