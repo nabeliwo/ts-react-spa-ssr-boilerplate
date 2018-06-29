@@ -1,16 +1,16 @@
-const path = require("path");
+const path = require('path')
 
 module.exports = {
-  target: "node",
+  target: 'node',
   entry: {
-    server: "./src/server.ts"
+    server: './src/server.ts',
   },
   output: {
-    path: path.join(__dirname, "../../dist"),
-    filename: "[name].bundle.js"
+    path: path.join(__dirname, '../../dist'),
+    filename: '[name].bundle.js',
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"]
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
@@ -18,14 +18,13 @@ module.exports = {
         test: /\.tsx?$/,
         use: [
           {
-            loader: "awesome-typescript-loader",
+            loader: 'awesome-typescript-loader',
             options: {
-              configFileName: "./tools/typescript/tsconfig.json"
-            }
-          }
-        ]
-      }
-    ]
-  }
-};
-
+              configFileName: './tools/typescript/tsconfig.json',
+            },
+          },
+        ],
+      },
+    ],
+  },
+}

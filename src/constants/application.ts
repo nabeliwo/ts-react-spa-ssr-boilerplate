@@ -1,7 +1,7 @@
 export const path = {
-  root: "/"
-};
+  root: '/',
+}
 
 export const server = {
-  port: 3333
-};
+  port: 3333,
+}

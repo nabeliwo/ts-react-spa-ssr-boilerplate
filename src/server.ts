@@ -1,22 +1,22 @@
-import * as express from "express";
-import * as path from "path";
+import * as express from 'express'
+import * as path from 'path'
 
-import { server } from "./constants/application";
-import { env } from "./constants/env";
+import { server } from './constants/application'
+import { env } from './constants/env'
 
-const PORT = process.env.PORT || server.port;
-const app = express();
+const PORT = process.env.PORT || server.port
+const app = express()
 
-app.use(express.static(path.join(process.cwd(), "public")));
+app.use(express.static(path.join(process.cwd(), 'public')))
 
 app.listen(PORT, (err: Error) => {
   if (err) {
-    console.error(err);
+    global.console.error(err)
   }
 
-  console.log(` ⚙️  ${env} app listening @ ${PORT} ⚙️ \n`);
-  console.log(` --  launched @ ${Date()}  --`);
-  console.log(
-    "---------------------------------------------------------------------------\n\n"
-  );
-});
+  global.console.log(` ⚙️  ${env} app listening @ ${PORT} ⚙️ \n`)
+  global.console.log(` --  launched @ ${Date()}  --`)
+  global.console.log(
+    '---------------------------------------------------------------------------\n\n',
+  )
+})
