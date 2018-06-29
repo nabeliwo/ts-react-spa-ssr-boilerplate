@@ -1,5 +1,5 @@
-import express from "express";
-import path from "path";
+import * as express from "express";
+import * as path from "path";
 
 import { server } from "./constants/application";
 import { env } from "./constants/env";
@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.static(path.join(process.cwd(), "public")));
 
-app.listen(PORT, err => {
+app.listen(PORT, (err: Error) => {
   if (err) {
     console.error(err);
   }

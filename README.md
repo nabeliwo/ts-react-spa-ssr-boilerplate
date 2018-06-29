@@ -1,3 +1,3 @@
 # ts-react-spa-ssr-boilerplate
 
-Only React
+React with TypeScript

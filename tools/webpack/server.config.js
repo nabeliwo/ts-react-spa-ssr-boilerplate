@@ -1,31 +1,31 @@
 const path = require("path");
 
-const env = process.env.NODE_ENV || "development";
-const isDevelopment = env === "development";
-
 module.exports = {
   target: "node",
   entry: {
-    server: "./src/server.js"
+    server: "./src/server.ts"
   },
   output: {
     path: path.join(__dirname, "../../dist"),
     filename: "[name].bundle.js"
   },
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".ts", ".tsx", ".js"]
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
+        test: /\.tsx?$/,
         use: [
           {
-            loader: "babel-loader"
+            loader: "awesome-typescript-loader",
+            options: {
+              configFileName: "./tools/typescript/tsconfig.json"
+            }
           }
         ]
       }
     ]
   }
 };
+
