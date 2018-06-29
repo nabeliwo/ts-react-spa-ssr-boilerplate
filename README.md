@@ -1,3 +1,7 @@
 # ts-react-spa-ssr-boilerplate
 
-React with TypeScript
+- TypeScript
+- React
+- TSLint
+- stylelint
+- Prettier
